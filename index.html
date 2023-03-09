@@ -6,23 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PHP Badwords</title>
 
-    <!-- STYLE -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- TAILWIND -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="container">
-      <form method="GET" action="./form.php">
-        <div class="my-col">
-          <label for="usertext">Scrivi del testo</label>
-          <textarea name="usertext" rows="6" cols="30"></textarea>
+  <body class="bg-teal-200">
+    <div class="container flex w-10/12 mx-auto min-h-screen py-5">
+      <form
+        method="GET"
+        target="_blank"
+        action="./form.php"
+        class="w-full flex items-center justify-center gap-x-4"
+      >
+        <div class="my-col w-3/12 text-center h-max">
+          <label for="usertext" class="block text-sky-600"
+            >Scrivi del testo</label
+          >
+          <textarea
+            name="usertext"
+            rows="6"
+            cols="30"
+            class="border"
+          ></textarea>
         </div>
 
-        <div class="my-col">
-          <label for="badwords">Scrivi la parola da censurare</label>
-          <input type="text" name="badwords" />
+        <div class="my-col w-3/12 text-center h-max">
+          <label for="badwords" class="block text-sky-600"
+            >Scrivi la parola da censurare</label
+          >
+          <input type="text" name="badwords" class="border w-100" />
         </div>
 
-        <button type="submit">Invia</button>
+        <div class="my-col w-3/12 text-center h-max">
+          <button
+            type="submit"
+            class="border rounded-full bg-sky-400 w-20 py-2"
+          >
+            Invia
+          </button>
+        </div>
       </form>
     </div>
   </body>

@@ -2,6 +2,12 @@
 
 > Primo esercizio in PHP
 
+## TECNOLOGIE e LIBRERIE:
+
+- HTML
+- PHP
+- Tailwind
+
 ## DESCRIZIONE:
 
 Creare un form PHP che permetta di inviare due campi: un paragrafo ed una parola da censurare.
