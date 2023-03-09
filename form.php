@@ -1,5 +1,9 @@
 <?php
-    $paragraph_length = strlen($_GET["usertext"])
+    $paragraph_length = strlen($_GET["usertext"]);
+
+    $censured_paragraph = str_replace($_GET["badwords"], "***", $_GET["usertext"]);
+
+    $censured_paragraph_length = strlen($censured_paragraph);
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +28,16 @@
     <h2>PAROLA DA CENSURARE:</h2>
     <p>
         <?php echo $_GET["badwords"] ?>
+    </p>
+
+    <hr>
+
+    <h2>PARAGRAFO CENSURATO:</h2>
+    <p>
+        <?php echo $censured_paragraph ?>
+        . Il nuovo paragrafo è lungo
+        <?php echo $censured_paragraph_length ?>
+        caratteri.
     </p>
 </body>
 </html>
